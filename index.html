@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechCart - Tienda de electronica</title>
+</head>
+<body>
+  <!-- ENCABEZADO -->
+   <header>
+    <h1>TechCart</h1>
+    <nav aria-label="Principal">
+      <ul>
+        <li>
+          <a href="#catalogo">catalogo</a>
+        </li>
+        <li>
+          <a href="#compra">Compra</a>
+        </li>
+        <li>
+          <a href="nosotros.html">Nosotros</a>
+        </li>
+      </ul>
+    </nav>
+   </header>
+   <!--CONTENIDO PRINCIPAL -->
+   <main>
+    <section id="catalogo">
+      <h2>Catalogo de productos</h2>
+      <article>
+        <figure>
+          <img src="https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/3325/PMP20001175698/full_image-1.jpeg" alt="macbook">
+          <figcaption>Apple</figcaption>
+        </figure>
+        <h3>Macbook Pro 14"</h3>
+        <p><strong>$1,999.99</strong></p>
+        <button type="button">Agregar al carrito</button>
+      </article>
+      <article>
+        <figure>
+          <img src="https://m.media-amazon.com/images/I/71t00KFZOaL.jpg" alt="controller scuf">
+          <figcaption>Scuf</figcaption>
+        </figure>
+        <h3>Scuf Omega PS5</h3>
+        <p><strong>$300</strong></p>
+        <button type="button">Agregar al carrito</button>
+      </article>
+      <article>
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRScvjuMrij-0_M1wQCydQy7g9ZTUjhiP04IYjzUIBckdDrDX7DZSmnRyFS&s=10" alt="mouse">
+          <figcaption>Logitech</figcaption>
+        </figure>
+        <h3>Logitech g pro x2</h3>
+        <p><strong>$289.99</strong></p>
+        <button type="button">Agregar al carrito</button>
+      </article>
+    </section>
+    <section id="compra">
+      <h2>Finalizar compra</h2>
+      <form>
+        <fieldset>
+            <legend>
+              Datos de envio
+            </legend>
+          <p>
+            <label for="nombre">Nombre completo</label>
+            <input for="text" id="nombre" name="nombre" required minlength="3">
+          </p>
+          <p>
+            <label for="email">Correo electronico</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </p>
+          <p>
+            <label for="direccion">Direccion</label>
+            <input type="text" id="direccion" name="direccion" required minlength="5" autocomplete="street-address">
+          </p>
+          <p>
+            <label for="telefono">Telefono</label>
+            <small>format: 123-456-789</small>
+            <input 
+              type="tel"
+              id="telefono"
+              name="telefono"
+              pattern="[9]{1}-[0-9]{2}-[0-9]{3}-[0-9]{3}"
+              required
+              >
+          </p>
+          <p>
+            <label for="pais">Pais</label>
+            <select id="pais" name="pais">
+              <option value="">-Elige el Pais-</option>
+              <optgroup label="Latinoamerica">
+                <option value="pe">Peru</option>
+                <option value="co">Colombia</option>
+                <option value="mx">Mexico</option>
+              </optgroup>
+              <optgroup label="Europa">
+                <option value="es">Espana</option>
+                <option value="fr">Francia</option>
+                <option value="pt">Portugal</option>
+              </optgroup>
+            </select>
+          </p>
+          <p>
+            <label for="fecha">Fecha de entrega deseada</label>
+            <input type="date" id="fecha" name="fecha">
+          </p>
+          <p>
+            <label for="notas">Notas para el repartidor</label>
+            <textarea name="notas" id="notas" rows="3" maxlength="200"></textarea>
+          </p>
+        </fieldset>
+        <button type="submit">Confirmar pedido</button>
+      </form>
+    </section>
+   </main>
+   <footer>
+    <p>TechCart - Proyecto educativo</p>
+    <p>Datos e imagenes provenientes de DummyJSON</p>
+   </footer>
+</body>
+</html>
